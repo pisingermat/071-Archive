@@ -5,13 +5,13 @@ This project aimed to design and build a tunable AM radio receiver.
 Ultimately, the circuit that was built unable to detect signals from radio stations. However, a transmitted 3.6kHz square wave test signal that was modulating a 1MHz carrier wave was audibly detected.
 
 At it's core, the most general receiver is composed of four components, each with a very specific role:
-1) The antenna 
+1) The antenna:
 The antenna collects energy from the radio waves that are travelling through the air and turns it into a small electrical signal. The radio waves are all oscillating at different frequencies, but the antenna effectively detects all of them. In this circuit we use a loop antenna to detect the magnetic fields. 
-2) The bandpass filter (also known as a "resonator")
+2) The bandpass filter (also known as a "resonator"):
 The bandpass filter then specifically selects the frequency we would like to listen to by resonating at that frequency, while reducing the effects and noise from all other frequencies. This component is what actually "tunes" the radio when you listen to different stations. In this circuit we use a simple LC circuit as the resonator. 
-3) The demodulator
+3) The demodulator:
 The demodulator extracts the audio signal from the carrier wave. Because the carrier waves are at such high frequencies the demodulator is important to prevent any issues with the impedance of the op-amp that comes later in the amplifier circuit. In this circuit the demodulation step is done by a diode in series with a RC circuit.
-4) The amplifier
+4) The amplifier:
 The amplifier increases the energy of the received and demodulated signal to make it detectable by an oscilloscope or audible through a speaker. In this circuit we use a non-inverting amplifier with a gain of 100.
 
 The components used in this project are:
